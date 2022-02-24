@@ -197,9 +197,15 @@ const clickbtn = (type) => {
 }
 
 const navTo = (where) => {
+	console.log(where);
 	$('html, body').animate({
         scrollTop: $('#' + where).offset().top
     }, 500);
+	navBar.classList.remove("active");
+	menuBtn.style.opacity = "1";
+	menuBtn.style.pointerEvents = "auto";
+	// body.style.overflowX = "auto";
+	// scrollBtn.style.pointerEvents = "auto";
 }
 
 
