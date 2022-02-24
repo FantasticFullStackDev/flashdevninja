@@ -1284,7 +1284,7 @@ p {
     width: 300px; 
   }
   .description {
-    padding: 50px 100px;
+    padding: 50px 10%;
     height: auto;
   }
 }
