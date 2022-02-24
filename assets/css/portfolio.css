@@ -1,5 +1,5 @@
 body {
-	background: linear-gradient(264deg, rgba(23,23,23,1) 0%, rgba(33,33,33,1) 49%, rgba(23,23,23,1) 100%);
+	/* background: linear-gradient(264deg, rgba(23,23,23,1) 0%, rgba(33,33,33,1) 49%, rgba(23,23,23,1) 100%); */
 	font-family: 'Open Sans', sans-serif;
 	margin: 0; 
 }
@@ -9,7 +9,7 @@ body {
 
 .subtitle {
 	text-align: center;
-    color: burlywood;
+    color: var(--primary-color);
     font-size: 4.5em;
     font-family: 'Parisienne', cursive;
 	margin-bottom: 15px;
@@ -57,7 +57,7 @@ body {
     box-shadow: -1px 1px 11px rgba(0,0,0,.4);
     margin: 0 40px;
     border-radius: 30px;
-	background-color: #232323;
+	  background-color: var(--bg-color);
 }
 
 .filters li {
@@ -81,8 +81,8 @@ body {
 } */
 
 .filters li.active a{
-	color: burlywood;
-	border: 1px solid burlywood;
+	color: var(--primary-color);
+	border: 1px solid var(--primary-color);
 	border-radius: 15px;
 	box-shadow: -1px 1px 11px rgba(0,0,0,.4);
 	padding: 10px 25px;
@@ -104,8 +104,8 @@ body {
     /* padding-right: 26px; */
     box-shadow: -1px 1px 11px rgba(0,0,0,.1);
     border-radius: 25px;
-    background-color: #232323;
-    border: .5px solid burlywood;
+    background-color: var(--bg-color);
+    border: .5px solid var(--primary-color);
 	text-decoration:none;
 }
 
@@ -116,11 +116,11 @@ body {
 }
 
 .isotope-pager .active{
-  color: burlywood !important;
+  color: var(--primary-color) !important;
     box-shadow: -1px 1px 10px 5px rgba(0,0,0,.1);
     border-radius: 25px;
     background-color: #161616;
-    border: 1px dotted burlywood;
+    border: 1px dotted var(--primary-color);
 }
 
 .isotope-pager .prev{
@@ -178,7 +178,8 @@ body {
 /*-- footer --*/
 .footer {
     padding: 1em;
-	background: linear-gradient(180deg, rgba(227,202,102,1) 0%, rgba(180,142,71,1) 100%);
+	  /* background: linear-gradient(180deg, rgba(227,202,102,1) 0%, rgba(180,142,71,1) 100%); */
+    background-color: var(--bg2-color);
     text-align: center;
 }
 .footer  p {
@@ -268,7 +269,7 @@ p {
   text-transform: uppercase;
   white-space: nowrap;
   letter-spacing: -2px;
-  color: burlywood;
+  color: var(--primary-color);
 }
 
 .portfolio-logo > div:nth-child(1)::after {
@@ -279,7 +280,7 @@ p {
   color: white;
   content: "lakeworks";
   font-size: 70pt;
-  text-shadow: 1px 1px 10px burlywood;
+  text-shadow: 1px 1px 10px var(--primary-color);
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -300,8 +301,8 @@ p {
   transform: rotateZ(20deg);
   text-transform: uppercase;
   color: white;
-  border-left: 3px solid burlywood;
-  text-shadow: 1px 1px 10px burlywood;
+  border-left: 3px solid var(--primary-color);
+  text-shadow: 1px 1px 10px var(--primary-color);
 }
 
 .portfolio-logo > div:nth-child(1) > abbr:nth-child(2) {
@@ -509,8 +510,8 @@ p {
   content: "";
   bottom: 0;
   left: 0;
-  background: burlywood;
-  outline: 1px dotted burlywood;
+  background: var(--primary-color);
+  outline: 1px dotted var(--primary-color);
   outline-offset: 6px;
   animation: borders-left 20s linear infinite;
   animation-direction: alternate;
@@ -549,7 +550,7 @@ p {
   height: auto;
   content: "FLAKEWORKS";
   writing-mode: vertical-lr;
-  color: burlywood;
+  color: var(--primary-color);
   transition: all 0.3s ease-in-out;
   animation: squish 10s ease-in-out infinite;
 }
@@ -579,7 +580,7 @@ p {
 }
 
 .item-desc h2 {
-  color: burlywood;
+  color: var(--primary-color);
   margin: 0;
   font-size: 24pt;
   line-height: 26pt;
@@ -600,8 +601,8 @@ p {
   justify-content: center;
   font-size: 14pt;
   font-weight: 600;
-  outline: 1px solid burlywood;
-  border: 1px dotted burlywood;
+  outline: 1px solid var(--primary-color);
+  border: 1px dotted var(--primary-color);
   text-decoration: none;
   text-transform: uppercase;
   color: white;
@@ -619,7 +620,7 @@ p {
   left: -50%;
   width: 50%;
   height: 100%;
-  background: burlywood;
+  background: var(--primary-color);
   content: "";
   z-index: -1;
 }
@@ -630,7 +631,7 @@ p {
   right: -50%;
   width: 50%;
   height: 100%;
-  background: burlywood;
+  background: var(--primary-color);
   content: "";
   z-index: -1;
 }
@@ -688,7 +689,7 @@ p {
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px;
   border-radius: 10px;
   transform-style: preserve-3d;
-  outline: 1px solid burlywood;
+  outline: 1px solid var(--primary-color);
   outline-offset: -15px;
   outline-style: groove;
   z-index: 1;
@@ -705,8 +706,8 @@ p {
   border-radius: 100px;
   z-index: -1;
   content: "";
-  border: 2px solid burlywood;
-  color: burlywood;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
   transition: all 0.3s ease-in-out;
 }
 
@@ -740,7 +741,7 @@ p {
   height: 100%;
   overflow: hidden;
   border-radius: 10px;
-  outline: 1px ridge burlywood;
+  outline: 1px ridge var(--primary-color);
   outline-offset: -10px;
   transform-style: preserve-3d;
   z-index: 2;
@@ -764,8 +765,8 @@ p {
   letter-spacing: -1px;
   color: white;
   background-color: transparent;
-  background-image: radial-gradient(burlywood 0.75px, transparent 0.75px),
-    radial-gradient(burlywood 0.75px, #00000055 0.75px);
+  background-image: radial-gradient(var(--primary-color) 0.75px, transparent 0.75px),
+    radial-gradient(var(--primary-color) 0.75px, #00000055 0.75px);
   background-size: 30px 30px;
   background-position: 0px 0px, 15px 15px;
   opacity: 0;
@@ -800,7 +801,7 @@ p {
 .item-card > div:nth-child(1):hover,
 .portfolio-item:hover > .item-card > div:nth-child(1) {
   transform: rotateX(20deg) rotateY(10deg);
-  box-shadow: burlywood 0px 2px 4px, burlywood 0px 7px 13px -3px;
+  box-shadow: var(--primary-color) 0px 2px 4px, var(--primary-color) 0px 7px 13px -3px;
   outline-offset: 60px;
   outline-style: dashed;
   transition: all 0.3s ease-in-out;
@@ -1053,5 +1054,212 @@ p {
   }
   .item-card > div > picture::before {
     font-size: 18pt;
+  }
+}
+
+
+/* NewBounce CSS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.pre-loader {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+}
+
+.pre-loader .shape {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* transform: translateY(-2em); */
+}
+
+.pre-loader .shape .circle {
+  border-radius: 50%;
+  margin: 0 8vw;
+  animation: newbounce 2s linear infinite;
+}
+.pre-loader .shape .circle:nth-child(2) {
+  animation-delay: 0.9s;
+}
+.pre-loader .shape .circle:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.pre-loader .second .circle {
+  border-radius: 50%;
+  margin: 0 8vw;
+  animation: newbounce 2s linear infinite;
+  animation-delay: 1.2s;
+}
+.pre-loader .second .circle:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.pre-loader .second .circle:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+@media (max-width: 767px) {
+  .pre-loader .shape .circle {
+    margin: 0 5vw;
+  }
+  .pre-loader .second .circle {
+    margin: 0 5vw;
+  }
+}
+
+@media (max-width: 565px) {
+  .pre-loader .shape .circle {
+    margin: 0 3vw;
+  }
+  .pre-loader .second .circle {
+    margin: 0 3vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .pre-loader .shape .circle {
+    transform: translateY(0) scale(0.6, 0.6);
+  }
+  .pre-loader .second .circle {
+    transform: translateY(0) scale(1, 1);
+  }
+}
+
+@keyframes newbounce {
+  from,
+  to {
+    transform: translateY(0) scale(1, 1);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: translateY(1em) scale(1, 1);
+    animation-timing-function:ease;
+  }
+  50% {
+    transform: translateY(1em) scale(1.05, 0.95);
+    animation-timing-function: ease;
+  }
+  100% {
+    transform: translateY(1em) scale(1, 1);
+    animation-timing-function: ease-out;
+  }
+}
+
+.contact {
+  background-color: var(--bg2-color);
+  margin-top: 40px; 
+  padding: 20px 24px 40px!important;
+}
+
+.contact-title {
+  color: var(--primary-color) !important;
+}
+
+
+/* Letter GSAP Loading */
+
+.animate span {
+  display: inline-block;
+}
+
+.one span {
+  opacity: 0;
+}
+
+.two span {
+  opacity: 0;
+}
+
+.three span {
+  opacity: 0;
+}
+
+/****** ANIMATING TITLE ******/
+.title-word {
+  animation: color-animation 4s linear infinite;
+}
+
+.title-word-1 {
+  --color-1: #DF8453;
+  --color-2: #3D8DAE;
+  --color-3: #E4A9A8;
+}
+
+.title-word-2 {
+  --color-1: #DBAD4A;
+  --color-2: #ACCFCB;
+  --color-3: #17494D;
+}
+
+.title-word-3 {
+  --color-1: #ACCFCB;
+  --color-2: #E4A9A8;
+  --color-3: #ACCFCB;
+}
+
+.title-word-4 {
+  --color-1: #3D8DAE;
+  --color-2: #DF8453;
+  --color-3: #E4A9A8;
+}
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+}
+
+/* Here are just some visual styles. 🖌 */
+
+.title {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 800;
+  font-size: 6vw;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/***** Wavily Animatiion Letters *****/
+.waviy {
+  position: relative;
+  text-align: center;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+.waviy span {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  animation: waviy 2s infinite;
+  animation-delay: calc(.1s * var(--i));
+  
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+
+@media (max-width: 840px) {
+  .waviy {
+    font-size: 6vw;
+    margin-bottom: 6vw;
   }
 }

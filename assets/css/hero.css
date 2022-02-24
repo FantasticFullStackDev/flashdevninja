@@ -9,14 +9,18 @@
 }
 :root{
     --primary-color:burlywood;
-    --black-color: burlywood;
+    --bg-color: #232323;
+    --bg2-color: #2323236e;
+    --bg3-color: #232323cc;
+    --title-color: rgb(247, 229, 205);
     --white-color:#fff;
     --hover-color:#091618;
 
 }
 body{
   font-family: 'Ubuntu', sans-serif;
-  background-color: #091618;
+  background-color: black;
+  /* #091618; */
 }
 /* Custom Scroll Bar CSS */
 ::-webkit-scrollbar {
@@ -34,10 +38,171 @@ body{
     background: var(--primary-color);
 }
 
+/* navbar styling */
+nav{
+  position:fixed;
+  width:100%;
+  padding: 10px 0;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+nav.sticky{
+  background: #232323cc;
+  padding:13px 0;
+}
+nav .navbar{
+  width:90%;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin:auto;
+}
+nav .navbar .logo a{
+  font-weight: 500;
+  font-size: 35px;
+  color:var(--primary-color);
+}
+
+nav.sticky .navbar .logo a{
+  color:var(--white-color);
+}
+
+nav .navbar .menu{
+  display:flex;
+  position:relative;
+}
+nav .navbar .menu li{
+  list-style: none;
+  margin:0 10px;
+}
+nav .navbar .menu a{
+  font-size: 18px;
+  font-weight: 500;
+  color:var(--primary-color);
+  padding:6px 0;
+  transition: all 0.4s ease;
+}
+.navbar .menu a:hover{
+  color:var(--primary-color);
+}
+nav.sticky .menu a{
+  color:var(--white-color);
+}
+nav.sticky .menu a:hover{
+  color:var(--primary-color);
+}
+.navbar .media-icons a{
+  color:var(--primary-color);
+  font-size: 18px;
+  margin:0 6px;
+}
+nav.sticky .media-icons a{
+  color:var(--white-color);
+}
+
+/* side navigation Menu Button CSS */
+nav .menu-btn,
+.navbar .menu .cancel-btn{
+  position:absolute;
+  color:var(--white-color);
+  right:30px;
+  top:20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: none;
+}
+nav .menu-btn{
+  color:var(--primary-color);
+}
+nav.sticky .menu-btn{
+  color:var(--white-color);
+}
+.navbar .menu .menu-btn{
+  color:var(--white-color);
+}
+
+@media (max-width:750px){
+  nav .navbar{
+    width:90%;
+  }
+  nav .navbar .menu{
+    position:fixed;
+    left:-100%;
+    top:0;
+    background: #232323f5;
+    height:100vh;
+    max-width: 400px;
+    width:100%;
+    padding-top:60px;
+    flex-direction: column;
+    align-items:center;
+    transition: all 0.5s ease;
+  }
+  .navbar.active .menu{
+    left:0;
+  }
+  nav .navbar .menu a{
+    font-size:23px;
+    display:block;
+    color:var(--white-color);
+    margin:10px 0;
+  }
+  nav.sticky .menu a:hover{
+    color:var(--primary-color);
+  }
+  nav .navbar .media-icons{
+    display:none;
+  }
+  nav .menu-btn,
+  .navbar .menu .cancel-btn{
+    display:block;
+  }
+}
+
+.scroll-button a{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  color:var(--white-color);
+  background:var(--bg2-color);
+  animation: bounce 1.5s infinite;
+  padding:10px 10px;
+  font-size: 18px;
+  border-radius: 6px;
+  border: 1px solid var(--primary-color);
+  box-shadow: rgba(0,0,0,0.15);
+  display:none;
+  z-index: 10000;
+}
+
+@-webkit-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}	
+	40% {-webkit-transform: translateY(-10px);}
+	60% {-webkit-transform: translateY(-5px);}
+}
+ 
+@-moz-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+	40% {-moz-transform: translateY(-10px);}
+	60% {-moz-transform: translateY(-5px);}
+}
+ 
+@-o-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+	40% {-o-transform: translateY(-10px);}
+	60% {-o-transform: translateY(-5px);}
+}
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-10px);}
+	60% {transform: translateY(-5px);}
+}
+
 hr {
     width: 90%;
     margin-left: 5% !important;
-    background-color: burlywood;
+    background-color: var(--primary-color);
     opacity: 0.5;
 }
 
@@ -65,19 +230,19 @@ hr {
 }
 .home .text-one{
   font-size:25px;
-  color:var(--black-color);
+  color:var(--primary-color);
 }
 .home .text-three{
   font-size: 40px;
   margin:5px 0;
   /* color:var(--primary-color); */
-  color: rgb(247, 229, 205);
+  color: var(--title-color);
 }
 .home .text-four{
   font-size: 23px;
   margin:5px 0;
-  /* color:var(--black-color); */
-  color: rgb(247, 229, 205);
+  /* color:var(--primary-color); */
+  color: var(--title-color);
 }
 
 /* About Section Styling */
@@ -95,7 +260,7 @@ section .title{
   margin-bottom: 40px;
 }
 section .title span{
-  color:var(--black-color);
+  color:var(--primary-color);
   font-size: 30px;
   font-weight: 600;
   position:relative;
@@ -135,14 +300,14 @@ section .title span::after{
   width:55%;
 }
 section .topic{
-  color:var(--black-color);
+  color:var(--primary-color);
   font-size:25px;
   font-weight: 500;
   margin-bottom: 10px;
 }
 .about-details .right p{
   text-align: justify;
-  color:var(--black-color);
+  color:var(--primary-color);
 }
 section .button{
   margin:16px 0;
@@ -181,7 +346,7 @@ section .button button:hover{
   width:50%;
 }
 .skills-details p{
-  color:var(--black-color);
+  color:var(--primary-color);
   text-align: justify;
 }
 .skills .skills-details .experience{
@@ -190,11 +355,11 @@ section .button button:hover{
   margin:0 10px;
 }
 .skills-details .experience .num{
-  color:var(--black-color);
+  color:var(--primary-color);
   font-size: 80px;
 }
 .skills-details .experience .exp{
-  color:var(--black-color);
+  color:var(--primary-color);
   margin-left: 20px;
   font-size: 18px;
   font-weight: 500;
@@ -231,7 +396,7 @@ section .button button:hover{
 
 .topic {
     text-align: center;
-    color: burlywood !important;
+    color: var(--primary-color) !important;
 }
 
 /* Responsive Media Queries */
@@ -301,9 +466,9 @@ section .button button:hover{
   }
 }
 
-.span {
+ .span {
   font-size: 55px;
-  font-weight: 800;
+  font-weight: 700;
   color: #faebd7;
   z-index: 4;
 }
@@ -317,10 +482,10 @@ section .button button:hover{
 @keyframes loading {
   to {
     text-shadow: 20px 0 70px lightslategrey;
-    /* #ff0266; */
-    color: burlywood;
+    color: var(--primary-color);
   }
-}
+} 
+
 .loader span:nth-child(2) {
   animation-delay: 0.1s;
 }

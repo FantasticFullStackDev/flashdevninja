@@ -15,36 +15,59 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
-<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
 </head>
 <body>
     <canvas class="background" style="position: fixed; z-index: 1; pointer-events: none;"></canvas>
+    <!-- Move to up bottom -->
+    <div class="scroll-button">
+        <a onClick="navTo('home')"><i class="fa fa-arrow-up contact-title"></i></a>
+    </div>
+    <!-- navigation menu -->
+    <nav>
+        <div class="navbar">
+            <div class="logo"><a href="#">Portfolio</a></div>
+            <ul class="menu">
+                <li class= "li"><a href="#home">Home</a></li>
+                <li class= "li"><a href="#about">About</a></li>
+                <li class= "li"><a href="#skills">Skills</a></li>
+                <li class= "li"><a href="#services">Services</a></li>
+                <li class= "li"><a href="#myworks">Portfolio</a></li>
+                <li class= "li"><a href="#contact">Contact</a></li>
+                <div class="cancel-btn">
+                    <i class="fa fa-times"></i>
+                </div>
+            </ul>
+        </div>
+        <div class="menu-btn">
+            <i class="fa fa-bars" style="margin-top: 8px;"></i>
+        </div>
+    </nav>
     <!-- Hero Section -->
     <section class="home" id="home">
         <div class="home-content">
             <div>
                 <div class="text-two">       
                     <div class="text-three">Hi, I'm Jin Wang</div>  <br/>
-                    <h3 class="span loader">
-                    <span class='m'>Web</span>
-                    <span class='m'>&</span>
-                    <span class='m'>Blockchain</span>
-                    <span class='m'>Developer</span>
-                    </h3><br/> 
+                    <h4 class="span loader">
+                        <span class='m'>Web</span>
+                        <span class='m'>&</span>
+                        <span class='m'>Blockchain</span>
+                        <span class='m'>Developer</span>
+                    </h4><br/> 
                 </div>
                 <div class="text-four">Specialized in React | NodeJS | Web3JS</div>
             </div>
         </div>
     </section>
-    <hr/>
+    <hr id="skills"/>
     <!-- My Skill Section -->
     <!-- <h1 id="myskills" class="subtitle"> My Skills & Services </h1> -->
-    <section class="skills" id="skills" style="padding-top: 0px;">
-        <div class="content">
-            <div class="boxes">
-                <div class="box">
+    <section class="skills" style="padding-top: 0px;">
+        <div class="content pre-loader">
+            <div class="boxes shape">
+                <div class="box circle">
                     <div class="topic">Front-End</div>
                     <div class="green">
                         <div class="progress">
@@ -56,7 +79,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="box">
+                <div class="box circle">
                     <div class="topic">Back-End</div>
                     <div class="green">
                         <div class="progress">
@@ -68,7 +91,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="box">
+                <div class="box circle">
                     <div class="topic">Mobile App</div>
                     <div class="red">
                         <div class="progress">
@@ -81,8 +104,8 @@
                     </div>
                 </div>
             </div>
-            <div class="boxes">
-                <div class="box">
+            <div class="boxes shape second">
+                <div class="box circle">
                     <div class="topic">Database</div>
                     <div class="orange">
                         <div class="progress">
@@ -94,7 +117,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="box">
+                <div class="box circle">
                     <div class="topic">Animation</div>
                     <div class="green">
                         <div class="progress">
@@ -106,7 +129,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="box">
+                <div class="box circle">
                     <div class="topic">Blockchain</div>
                     <div class="orange">
                         <div class="progress">
@@ -121,12 +144,14 @@
             </div>
         </div>
     </section>
-    <!-- My Abilities Section -->
-    <div class="portfolio-container">
+    <!-- My Services Section -->
+    <div id="services" class="portfolio-container">
         <div class="portfolio">    
             <div class="portfolio-item">    
-                <div class="item-desc">    
-                <h2>Website Development</h2>
+                <div class="item-desc"> 
+                <h2 class="animate one">
+                    <span>W</span><span>e</span><span>b</span><span>&nbsp;</span><span>D</span><span>e</span><span>v</span><span>e</span><span>l</span><span>o</span><span>p</span><span>m</span><span>e</span><span>n</span><span>t</span>
+                </h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet eget sit amet tellus cras adipiscing enim eu. Id aliquet risus feugiat in ante metus dictum at tempor. Varius morbi enim nunc faucianimation a.</p>
                 <a onClick="showWork('website')" title="Website Development">View Work</a>
         
@@ -147,11 +172,12 @@
             </div>        
             <div class="portfolio-item">
         
-                <div class="item-desc">
-        
-                <h2>Web Animations</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet eget sit amet tellus cras adipiscing enim eu. Id aliquet risus feugiat in ante metus dictum at tempor. Varius morbi enim nunc faucianimation a.</p>
-                <a onClick="showWork('animation')" title="Web Animations">View Work</a>
+                <div class="item-desc">        
+                    <h2 class="animate two">
+                        <span>W</span><span>e</span><span>b</span><span>&nbsp;</span><span>A</span><span>n</span><span>i</span><span>m</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span><span>s</span>
+                    </h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet eget sit amet tellus cras adipiscing enim eu. Id aliquet risus feugiat in ante metus dictum at tempor. Varius morbi enim nunc faucianimation a.</p>
+                    <a onClick="showWork('animation')" title="Web Animations">View Work</a>
         
                 </div>
         
@@ -170,11 +196,13 @@
             </div>        
             <div class="portfolio-item">
         
-                <div class="item-desc">
-        
-                <h2>Blockchain Development</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet eget sit amet tellus cras adipiscing enim eu. Id aliquet risus feugiat in ante metus dictum at tempor. Varius morbi enim nunc faucianimation a.</p>
-                <a onClick="showWork('blockchain')" title="Blockchain Development">View Work</a>
+                <div class="item-desc">      
+                    <h2 class="animate three">
+                        <span>B</span><span>l</span><span>o</span><span>c</span><span>k</span><span>c</span><span>h</span><span>a</span><span>i</span><span>n</span><span>&nbsp;</span>
+                        <span>D</span><span>e</span><span>v</span><span>e</span><span>l</span><span>o</span><span>p</span><span>m</span><span>e</span><span>n</span><span>t</span>
+                    </h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet eget sit amet tellus cras adipiscing enim eu. Id aliquet risus feugiat in ante metus dictum at tempor. Varius morbi enim nunc faucianimation a.</p>
+                    <a onClick="showWork('blockchain')" title="Blockchain Development">View Work</a>
         
                 </div>
         
@@ -195,7 +223,30 @@
     </div>
     <br/>
     <!-- My Previous Works -->
-    <h1 id="myworks" class="subtitle"> My Previous Works </h1>
+    <div class="container">
+        <!-- <h2 class="title">
+          <span class="title-word title-word-1">My</span>
+          <span class="title-word title-word-2">Previous</span>
+          <span class="title-word title-word-3">Works</span>
+        </h2> -->
+        <div class="waviy">
+            <span style="--i:1">P</span>
+            <span style="--i:2">r</span>
+            <span style="--i:3">e</span>
+            <span style="--i:4">v</span>
+            <span style="--i:5">i</span>
+            <span style="--i:6">o</span>
+            <span style="--i:7">u</span>
+            <span style="--i:8">s</span>
+            <span style="--i:9">&nbsp;</span>
+            <span style="--i:10">W</span>    
+            <span style="--i:11">o</span>       
+            <span style="--i:12">r</span>     
+            <span style="--i:13">k</span>     
+            <span style="--i:14">s</span>      
+        </div>
+    </div>
+    <!-- <h1 id="myworks" class="subtitle"> My Previous Works </h1> -->
     <div class="filters filter-button-group">
         <ul>
             <li class="active"><a href="javascript:void(0);" data-filter="*" id="all">All</a></li>
@@ -312,8 +363,8 @@
     <div class="isotope-pager" style="padding-top: 15px; text-align:center;"></div>
     
     <!-- Contact Section -->
-    <div class="w3-container w3-padding-large" style="background: #232323; margin-top: 40px; padding: 20px 24px 40px!important;">
-        <h2 id="contact"><b class="w3-text-white" style="color: burlywood!important;">Contact Me</b></h2>
+    <div class="w3-container w3-padding-large contact">
+        <h2 id="contact" class="contact-title"><b>Contact Me</b></h2>
         <br/>
         <div class="w3-row-padding w3-center w3-padding-24 w3-border w3-border-dark-grey" style="margin:0px; padding: 0px!important;">
             <div class="w3-third w3-dark-grey">
@@ -361,12 +412,12 @@
     </div>
     <!-- footer -->
     <div class="footer">
-        <p> &copy; Last Updated On Jan 1 2022 </p>
+        <p class="contact-title"> &copy; Last Updated On Jan 1 2022 </p>
     </div>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js'></script><script  src="./script.js"></script>
-    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js'></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
     <script src="./assets/js/hero.js"></script>
     <script src="./assets/js/portfolio.js"></script>
 </body>

@@ -195,3 +195,61 @@ const showWork = (type) => {
 const clickbtn = (type) => {
     $('#' + type).click();
 }
+
+const navTo = (where) => {
+	$('html, body').animate({
+        scrollTop: $('#' + where).offset().top
+    }, 500);
+}
+
+
+/***** GSAP Scroll Animation ******/
+
+var letterLoad = {
+	".one span" : false,
+	".two span" : false,
+	".three span" : false,
+}
+
+$(window).scroll(function(e){
+  value = $(window).scrollTop();
+//   console.log(value);
+  if(value > 780 && !letterLoad[".one span"])
+    letterLoading(".one span");
+  if (value > 1500 && !letterLoad[".two span"])
+    letterLoading(".two span");
+  if (value > 2200 && !letterLoad[".three span"])
+    letterLoading(".three span");
+});
+
+// Letter GSAP Loading one
+function letterLoading (target) {
+  letterLoad[target] = true;
+  let tl = gsap.timeline();
+  tl.fromTo(target, {
+      x: -150,
+      y: -50,
+      rotation: -180,
+      scale: 3
+  }, {
+      x: 20,
+      y: 20,
+      rotation: 30,
+      scale:  0.3,
+      duration: 0.24,
+      stagger: 0.05
+  })
+  .to(target, {
+      x: 0,
+      y: 0,
+      scale: 1,
+      rotation: 0,
+      duration: 0.16,
+      stagger: 0.05
+  }, 0.24) // start after the very first one ends
+  .to(target, {
+      opacity: 1,
+      duration: 0.4,
+      stagger: 0.05
+  }, 0);
+}
