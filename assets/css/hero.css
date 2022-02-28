@@ -429,6 +429,9 @@ section .button button:hover{
    .span {
      font-size: 50px !important;
    }
+   .m {
+     margin-left: -14px !important;
+   }
    .home .text-three{
     font-size: 30px;
   }
@@ -458,11 +461,29 @@ section .button button:hover{
   .home-content {
     width: 80% !important;
   }
+  .m {
+    margin-left: -13px!important;
+  }
   .span {
     font-size: 40px !important;
   }
   .home .text-three{
     font-size: 30px;
+  }
+}
+
+@media (max-width:620px){
+  .span {
+    font-size: 35px !important;
+  }
+  .m {
+    margin-left: -11px !important;
+  }
+}
+
+@media (max-width:550px){
+  .br {
+    display: block !important;
   }
 }
 
@@ -475,8 +496,16 @@ section .button button:hover{
 
 .loader span {
   color: #faebd7;
-  text-shadow: 0 0 0 #e3ca66;
-  animation: loading 3s ease-in-out infinite alternate;
+  text-shadow: 0 0 0 rgb(226, 153, 57);
+  animation: loading 2s ease-in-out infinite alternate;
+}
+
+.m {
+  margin-left: -16px;
+}
+
+.br {
+  display: none;
 }
 
 @keyframes loading {
@@ -549,6 +578,21 @@ section .button button:hover{
 }
 .loader span:nth-child(22) {
   animation-delay: 2.1s;
+} 
+.loader span:nth-child(23) {
+  animation-delay: 2.2s;
+} 
+.loader span:nth-child(24) {
+  animation-delay: 2.3s;
+} 
+.loader span:nth-child(25) {
+  animation-delay: 2.4s;
+} 
+.loader span:nth-child(26) {
+  animation-delay: 2.5s;
+} 
+.loader span:nth-child(27) {
+  animation-delay: 2.6s;
 } 
 .background {
   position: absolute;

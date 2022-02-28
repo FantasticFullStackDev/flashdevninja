@@ -1292,7 +1292,125 @@ p {
 /* Image Lazy Loading */
 .lazy {
   opacity: 0;
-  min-height: 300px;
-  min-width: 300px;
-  margin: 10px;
+  /* min-height: 300px;
+  min-width: 300px; */
+  /* margin: 10px; */
+}
+
+/***** Contact Me Animation ******/
+@import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
+#container {
+  filter: url(#threshold) blur(0.6px);
+}
+#text1,
+#text2 {
+    position: absolute;
+    width: 100%;
+    display: inline-block;
+
+    font-family: "Raleway", sans-serif;
+    font-size: 40pt;
+    color: var(--primary-color);
+    font-weight: bold;
+
+    text-align: center;
+
+    user-select: none;
+}
+
+/******* SKILLS ANIMATION *******/
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+.content {
+	position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content h2 {
+	color: #fff;
+	font-size: 6em;
+	position: absolute;
+}
+
+.content h2:nth-child(1) {
+	color: transparent;
+	-webkit-text-stroke: 2px var(--primary-color);
+}
+
+.content h2:nth-child(2) {
+	color: var(--primary-color);
+	animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+	0%,
+	100% {
+		clip-path: polygon(
+			0% 45%,
+			16% 44%,
+			33% 50%,
+			54% 60%,
+			70% 61%,
+			84% 59%,
+			100% 52%,
+			100% 100%,
+			0% 100%
+		);
+	}
+
+	50% {
+		clip-path: polygon(
+			0% 60%,
+			15% 65%,
+			34% 66%,
+			51% 62%,
+			67% 50%,
+			84% 45%,
+			100% 46%,
+			100% 100%,
+			0% 100%
+		);
+	}
+}
+
+.skills-bounce {
+  animation: newbounce 3s linear infinite;
+}
+
+/***** SERVICE LETTERS ANIMATION *****/
+.services {
+	color: #100f10;
+	font-size: max(6vw, 4em);
+	position: relative;
+	text-transform: uppercase;
+	-webkit-text-stroke: 0.3vw var(--primary-color);
+}
+
+.services::before {
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	color: var(--primary-color);
+	overflow: hidden;
+	position: absolute;
+	content: attr(data-text);
+	border-right: 2px solid var(--primary-color);
+	-webkit-text-stroke: 0vw var(--primary-color);
+	animation: animate1 6s linear infinite;
+}
+
+@keyframes animate1 {
+	0%,
+	10%,
+	100% {
+		width: 0;
+	}
+
+	70%,
+	90% {
+		width: 100%;
+	}
 }
