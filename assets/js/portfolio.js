@@ -220,11 +220,11 @@ var letterLoad = {
 $(window).scroll(function(e){
   value = $(window).scrollTop();
   console.log(value);
-  if(value > 1200 && !letterLoad[".one span"])
+  if(value > 1600 && !letterLoad[".one span"])
     letterLoading(".one span");
-  if (value > 1700 && !letterLoad[".two span"])
+  if (value > 2100 && !letterLoad[".two span"])
     letterLoading(".two span");
-  if (value > 2100 && !letterLoad[".three span"])
+  if (value > 2500 && !letterLoad[".three span"])
     letterLoading(".three span");
 });
 
