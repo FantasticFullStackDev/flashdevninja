@@ -222,9 +222,9 @@ $(window).scroll(function(e){
   console.log(value);
   if(value > 1600 && !letterLoad[".one span"])
     letterLoading(".one span");
-  if (value > 2100 && !letterLoad[".two span"])
+  if (value > 2500 && !letterLoad[".two span"])
     letterLoading(".two span");
-  if (value > 2500 && !letterLoad[".three span"])
+  if (value > 3200 && !letterLoad[".three span"])
     letterLoading(".three span");
 });
 
