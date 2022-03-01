@@ -159,11 +159,18 @@ body {
   color: #f1f1f1; 
   width: 100%;
   transition: .5s ease;
-  opacity:0;
-  color: white;
+  /* opacity:0; */
   font-size: 20px;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
+}
+
+.imageLink {
+  color: white;
+}
+
+.imageLink:hover {
+  text-decoration: underline;
 }
 
 .grid-item:hover .overlay {
@@ -1376,6 +1383,8 @@ p {
 }
 
 .skills-bounce {
+  width: 80%;
+  margin-left: 10%;
   animation: newbounce 3s linear infinite;
 }
 
@@ -1386,6 +1395,7 @@ p {
 	position: relative;
 	text-transform: uppercase;
 	-webkit-text-stroke: 0.3vw var(--primary-color);
+  text-shadow: 5px 5px black;
 }
 
 .services::before {
@@ -1399,6 +1409,7 @@ p {
 	content: attr(data-text);
 	border-right: 2px solid var(--primary-color);
 	-webkit-text-stroke: 0vw var(--primary-color);
+  text-shadow: 5px 5px 3px black;
 	animation: animate1 6s linear infinite;
 }
 
