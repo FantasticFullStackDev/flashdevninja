@@ -267,9 +267,8 @@ const elts = {
 };
 
 const texts = [
-    "If You're",
-    "Interested",
-    "Please Contact"
+    "Interested?",
+    "Contact Me"
 ];
 
 const morphTime = 1;
@@ -324,7 +323,7 @@ function animate() {
 
     let newTime = new Date();
     let shouldIncrementIndex = cooldown > 0;
-    let dt = (newTime - time) / 1000;
+    let dt = (newTime - time) / 1500;
     time = newTime;
 
     cooldown -= dt;
