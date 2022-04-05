@@ -197,7 +197,7 @@ const clickbtn = (type) => {
 }
 
 const navTo = (where) => {
-	console.log(where);
+	// console.log(where);
 	$('html, body').animate({
         scrollTop: $('#' + where).offset().top
     }, 500);

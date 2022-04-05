@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./assets/css/hero.css">
     <link rel="stylesheet" href="./assets/css/portfolio.css">
     <link rel="stylesheet" href="./assets/css/w3.css">
+    <link rel="stylesheet" href="./assets/css/scrollBtn.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/> -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -22,7 +23,7 @@
 <body>
     <canvas class="background" style="position: fixed; z-index: 1; pointer-events: none;"></canvas>
     <!-- Move to up bottom -->
-    <div class="scroll-button">
+    <div class="scroll-button" style="display: none;">
         <a onclick="navTo('home')"><i class="fa fa-arrow-up contact-title"></i></a>
     </div>
     <!-- navigation menu -->
@@ -490,10 +491,18 @@
         <p class="contact-title"> &copy; Last Updated On Jan 1 2022 </p>
     </div>
 
+    <!-- Button -->
+    <button class="scroll-btn">
+        <span class="scroll-btn__sign">Scroll Down</span>
+        <span class="scroll-btn__arrow"></span>
+    </button>
+    <!-- /Button -->
+
     <script src='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js'></script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
     <script src="./assets/js/hero.js"></script>
     <script src="./assets/js/portfolio.js"></script>
+    <script src="./assets/js/scrollBtn.js"></script>
 </body>
 </html>
