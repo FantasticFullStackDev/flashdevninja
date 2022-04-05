@@ -26,7 +26,8 @@ body {
     z-index: 2;
     overflow: hidden;
     text-align: center;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     border: 1px solid grey;
 }
 .grid-item img{
