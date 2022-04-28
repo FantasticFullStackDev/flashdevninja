@@ -666,6 +666,7 @@ p {
   width: 50%;
   height: auto;
   border-right: 5px dotted black;
+  opacity: 0.8;
 }
 
 .portfolio > .portfolio-item:nth-child(even) > .item-card {
