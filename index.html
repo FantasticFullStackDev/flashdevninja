@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./assets/css/w3.css">
     <link rel="stylesheet" href="./assets/css/scrollBtn.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/> -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Parisienne&display=swap" rel="stylesheet">
@@ -18,7 +18,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/threejs/r84/three.min.js"></script>
+    <!-- The main Three.js file -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js'></script>
+
+    <!-- This brings in the ability to load custom 3D objects in the .gltf file format. Blender allows the ability to export to this format out the box -->
+    <script src='https://cdn.jsdelivr.net/gh/mrdoob/Three.js@r92/examples/js/loaders/GLTFLoader.js'></script>
 </head>
 <body>
     <canvas class="background" style="position: fixed; z-index: 1; pointer-events: none;"></canvas>
@@ -27,7 +31,7 @@
         <a onclick="navTo('home')"><i class="fa fa-arrow-up contact-title"></i></a>
     </div>
     <!-- navigation menu -->
-    <nav style="width: 100%;">
+    <nav style="width: 100%; position: relative; z-index: 2;">
         <div class="navbar">            
             <div class="logo"><a href="#">Portfolio</a></div>
             <ul class="menu">
@@ -47,7 +51,7 @@
         </div>
     </nav>
     <!-- Hero Section -->
-    <section class="home" id="home">
+    <section class="home" id="home" style="position: relative; z-index: 2; margin-top: -50px;">
         <div class="home-content">
             <div>
                 <div class="text-two">       
@@ -86,7 +90,7 @@
         </div>
     </section>
     <hr/>
-    <div class="w3-container w3-padding-large">
+    <div class="w3-container w3-padding-large" style="position: relative; z-index: 2;">
         <div id="about"style="margin-top: -100px; height: 170px;"></div>
         <div class="w3-col l5" style="display: flex; justify-content: center;">
             <img data-src="./assets/images/me.png" class="avatar lazy" style="min-height: 300px; min-width: 300px; margin: 10px;"/>
@@ -104,7 +108,7 @@
     </div>
     <!-- My Skill Section -->
     <!-- <h1 id="myskills" class="subtitle"> My Skills & Services </h1> -->
-    <section class="skills" style="padding-top: 0px;">
+    <section class="skills" style="padding-top: 0px; position: relative; z-index: 2;">
         <div id="skills" style="margin-top: -100px; height: 100px;"></div>
         <section class="skills-bounce">
             <div class="content">
@@ -192,7 +196,7 @@
         </div>
     </section>
     <!-- My Services Section -->
-    <div class="portfolio-container">
+    <div class="portfolio-container" style=" position: relative; z-index: 2;">
         <div id="services" style="margin-top: -100px; height: 100px;"></div>
         <h2 class="services" data-text="SERVICES">SERVICES</h2>
         <div class="portfolio">    
@@ -302,7 +306,7 @@
     </div>
     <br/>
     <!-- My Previous Works -->
-    <div class="container">
+    <div class="container" style=" position: relative; z-index: 2;">
         <div id="myworks" style="margin-top: -100px; height: 100px;"></div>
         <!-- <h2 class="title">
           <span class="title-word title-word-1">My</span>
@@ -326,7 +330,7 @@
             <span style="--i:14">s</span>      
         </div>
     </div>
-    <div class="filters filter-button-group">
+    <div class="filters filter-button-group" style=" position: relative; z-index: 2;">
         <ul>
             <li class="active"><a href="javascript:void(0);" data-filter="*" id="all">All</a></li>
             <li><a href="javascript:void(0);" data-filter="website" id="website">Website</a></li>
@@ -334,7 +338,7 @@
             <li><a href="javascript:void(0);" data-filter="blockchain" id="blockchain">Blockchain</a></li>
         </ul>
     </div>
-	<div id="container" class="isotope">    
+	<div id="container" class="isotope" style=" position: relative; z-index: 2;">    
 		<div class="grid-item" data-filter="website">
             <a class="popupimg" href="./assets/images/portfolio/accounting.png" target="_blank">
                 <img class="lazy" data-src="./assets/images/portfolio/accounting.png">
@@ -428,10 +432,10 @@
 
 	</div>
     
-    <div class="isotope-pager" style="padding-top: 15px; text-align:center;"></div>
+    <div class="isotope-pager" style="padding-top: 15px; text-align:center; position: relative; z-index: 2;"></div>
     
     <!-- Contact Section -->
-    <div class="w3-container w3-padding-large contact">
+    <div class="w3-container w3-padding-large contact" style=" position: relative; z-index: 2;">
         <div id="contact" style="margin-top: -100px; height: 100px;"></div>
         <div id="container">
             <span id="text1"></span>
@@ -493,7 +497,7 @@
         </div>
     </div>
     <!-- footer -->
-    <div class="footer">
+    <div class="footer" style=" position: relative; z-index: 2;">
         <p class="contact-title"> &copy; Last Updated On Jan 1 2022 </p>
     </div>
 
@@ -503,12 +507,16 @@
         <span class="scroll-btn__arrow"></span>
     </button>
     <!-- /Button -->
-
+    <!-- ThreeJS Model -->
+    <div class="loading" id="js-loader"><div class="loader"></div></div>
+    <canvas id="c" ></canvas>    
+    <!-- /ThreeJS Model -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js'></script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
     <script src="./assets/js/hero.js"></script>
     <script src="./assets/js/portfolio.js"></script>
     <script src="./assets/js/scrollBtn.js"></script>
+    <script src="./assets/js/threemodel.js"></script>
 </body>
 </html>

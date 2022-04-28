@@ -38,6 +38,17 @@ body{
     background: var(--primary-color);
 }
 
+/* THREE Modeal */
+
+#c {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+
 /* navbar styling */
 nav{
   position:fixed;
