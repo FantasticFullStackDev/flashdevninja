@@ -45,7 +45,7 @@
             camera.position.x = 0;
             camera.position.y = -3;
             
-            let stacy_txt = new THREE.TextureLoader().load('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1376484/stacy.jpg');
+            let stacy_txt = new THREE.TextureLoader().load('./assets/images/stacy.jpg');
         
             stacy_txt.flipY = false; // we flip the texture so that its the right way up
         
