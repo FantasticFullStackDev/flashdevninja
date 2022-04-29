@@ -45,7 +45,7 @@
             camera.position.x = 0;
             camera.position.y = -3;
             
-            let stacy_txt = new THREE.TextureLoader().load('https://fantasticfullstackdev.github.io/jinwangdev/assets/images/me.jpg');
+            let stacy_txt = new THREE.TextureLoader().load('https://fantasticfullstackdev.github.io/jinwangdev/assets/images/stacy.jpg');
         
             stacy_txt.flipY = false; // we flip the texture so that its the right way up
         
