@@ -19,7 +19,7 @@
 }
 body{
   font-family: 'Ubuntu', sans-serif;
-  background-color: black;
+  background-color: black !important;
   /* #091618; */
 }
 /* Custom Scroll Bar CSS */
@@ -59,7 +59,8 @@ nav{
 }
 nav.sticky{
   background: #232323cc;
-  padding:13px 0;
+  padding:0px 0px !important;
+  position: fixed !important;
 }
 nav .navbar{
   width:90%;
@@ -133,7 +134,7 @@ nav.sticky .menu-btn{
   color:var(--white-color);
 }
 
-@media (max-width:750px){
+@media (max-width:850px){
   nav .navbar{
     width:90%;
   }

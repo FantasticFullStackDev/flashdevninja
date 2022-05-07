@@ -153,7 +153,7 @@ body {
 
 
 
-.overlay {
+._overlay {
   position: absolute; 
   bottom: 0; 
   background: rgb(0, 0, 0);
@@ -175,7 +175,7 @@ body {
   text-decoration: underline;
 }
 
-.grid-item:hover .overlay {
+.grid-item:hover ._overlay {
   opacity: 1;
 }
 
@@ -614,7 +614,7 @@ p {
   border: 1px dotted var(--primary-color);
   text-decoration: none;
   text-transform: uppercase;
-  color: white;
+  color: white !important;
   margin-top: 17px;
   overflow: hidden;
   z-index: 1;
@@ -654,7 +654,7 @@ p {
 }
 
 .item-desc a:hover {
-  color: black;
+  color: black !important;
   outline-offset: 10px;
 }
 
@@ -784,7 +784,7 @@ p {
   filter: contrast(0%);
   text-shadow: 1px 1px 3px black, 0px 0px 5px black, 1px 1px 0px black,
     2px 2px 0px black, 3px 3px 0px black, 4px 4px 0px black, 5px 5px 0px black;
-  mix-blend-mode: overlay;
+  mix-blend-mode: _overlay;
   transition: all 0.3s ease-in-out;
 }
 
