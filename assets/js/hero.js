@@ -47,10 +47,10 @@ let val;
 window.onscroll = function() {
   if($(window).scrollTop() > 20){
     nav.classList.add("sticky");
-    scrollBtn.style.display = "block";
+    // scrollBtn.style.display = "block";
   }else{
     nav.classList.remove("sticky");
-    scrollBtn.style.display = "none";
+    // scrollBtn.style.display = "none";
   }
 }
 
