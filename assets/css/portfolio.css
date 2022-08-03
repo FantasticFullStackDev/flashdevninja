@@ -33,10 +33,10 @@ body {
 .grid-item img{
 	width:100%;
 	height:auto;
-	filter: url(filters.svg#grayscale);
+	/* filter: url(filters.svg#grayscale);
     filter: gray;
     -webkit-filter: grayscale(1);
-    transition: 0.9s;
+    transition: 0.9s; */
 }
 .grid-item img:hover{
     filter: none;
@@ -169,6 +169,7 @@ body {
 
 .imageLink {
   color: white;
+  text-decoration: underline;
 }
 
 .imageLink:hover {
