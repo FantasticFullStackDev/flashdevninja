@@ -45,7 +45,7 @@
             camera.position.x = 0;
             camera.position.y = -3;
             
-            let stacy_txt = new THREE.TextureLoader().load('https://fantasticfullstackdev.github.io/jinwangdev/assets/images/stacy.jpg');
+            let stacy_txt = new THREE.TextureLoader().load('https://fantasticfullstackdev.github.io/flashdevninja/assets/images/stacy.jpg');
         
             stacy_txt.flipY = false; // we flip the texture so that its the right way up
         
@@ -92,11 +92,11 @@
                 mixer = new THREE.AnimationMixer(model);
                 let clips = fileAnimations.filter(val => val.name !== 'idle');
                 possibleAnims = clips.map(val => {
-                let clip = THREE.AnimationClip.findByName(clips, val.name);
-                clip.tracks.splice(3, 3);
-                clip.tracks.splice(9, 3);
-                clip = mixer.clipAction(clip);
-                return clip;
+                    let clip = THREE.AnimationClip.findByName(clips, val.name);
+                    clip.tracks.splice(3, 3);
+                    clip.tracks.splice(9, 3);
+                    clip = mixer.clipAction(clip);
+                    return clip;
                 });
                 
                 let idleAnim = THREE.AnimationClip.findByName(fileAnimations, 'idle');
@@ -216,8 +216,8 @@
             }
         }
             
-            // Get a random animation, and play it 
-            function playOnClick() {
+        // Get a random animation, and play it 
+        function playOnClick() {
             let anim = Math.floor(Math.random() * possibleAnims.length) + 0;
             playModifierAnimation(idle, 0.25, possibleAnims[anim], 0.25);
         }
@@ -228,51 +228,38 @@
             playModifierAnimation(idle, 0.25, possibleAnims[anim], 0.25);
         }
             
-            function playModifierAnimation(from, fSpeed, to, tSpeed) {
+        function playModifierAnimation(from, fSpeed, to, tSpeed) {
             to.setLoop(THREE.LoopOnce);
             to.reset();
             to.play();
             from.crossFadeTo(to, fSpeed, true);
             setTimeout(function() {
-            from.enabled = true;
-            to.crossFadeTo(from, tSpeed, true);
-            currentlyAnimating = false;
+                from.enabled = true;
+                to.crossFadeTo(from, tSpeed, true);
+                currentlyAnimating = false;
             }, to._clip.duration * 1000 - ((tSpeed + fSpeed) * 1000));
         }
-            
-            document.addEventListener('mousemove', function(e) {
+        
+        document.addEventListener('mousemove', function(e) {
             var mousecoords = getMousePos(e);
             if (neck && waist) {
                 moveJoint(mousecoords, neck, 50);
                 moveJoint(mousecoords, waist, 30);
             }
-            });
-        
-            function getMousePos(e) {
+        });
+    
+        function getMousePos(e) {
             return { x: e.clientX, y: e.clientY };
-            }
-            
-            document.addEventListener('mousemove', function(e) {
-            var mousecoords = getMousePos(e);
-                if (neck && waist) {
+        }
         
-                moveJoint(mousecoords, neck, 50);
-                moveJoint(mousecoords, waist, 30);
-                }
-            });
+        function moveJoint(mouse, joint, degreeLimit) {
+            let degrees = getMouseDegrees(mouse.x, mouse.y, degreeLimit);
+            joint.rotation.y = THREE.Math.degToRad(degrees.x);
+            joint.rotation.x = THREE.Math.degToRad(degrees.y);
+        //   console.log(joint.rotation.x);
+        }
         
-            function getMousePos(e) {
-            return { x: e.clientX, y: e.clientY };
-            }
-            
-            function moveJoint(mouse, joint, degreeLimit) {
-                let degrees = getMouseDegrees(mouse.x, mouse.y, degreeLimit);
-                joint.rotation.y = THREE.Math.degToRad(degrees.x);
-                joint.rotation.x = THREE.Math.degToRad(degrees.y);
-            //   console.log(joint.rotation.x);
-            }
-            
-            function getMouseDegrees(x, y, degreeLimit) {
+        function getMouseDegrees(x, y, degreeLimit) {
             let dx = 0,
                 dy = 0,
                 xdiff,
@@ -313,21 +300,21 @@
                 dy = (degreeLimit * yPercentage) / 100;
             }
             return { x: dx, y: dy };
-            }      
+        }      
 
-            function makeAnimation (num) {
+        function makeAnimation (num) {
             console.log(num);
             const anims = ['wave', 'shrug', 'rope', 'pocket', 'jump', 'golf', 'swingdance',  'react', 'wave'];
             if (!currentlyAnimating) {
                 currentlyAnimating = true;
                 playOnScroll(anims[num]);
             }
-            }
+        }
 
-            $(window).scroll(function(e){
+        $(window).scroll(function(e){
             var value = $(window).scrollTop();
             if(value % 1100 < 50) {
                 makeAnimation(Math.floor(value / 1100));
             }
-            });
+        });
 })(); 
